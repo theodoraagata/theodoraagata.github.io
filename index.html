@@ -1,1 +1,73 @@
-<h1> Welcome to my web </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="Hasilperhitungan">
+		<table> 
+			<tbody><tr><th align="center" colspan="2"><h1>Perhitungan Kalkulator Sederhana</h1></th>
+		</tr>
+			<tr> 
+				<td><b>Nilai bilangan ke-1</b></td>
+				<td><input type="number" id="Nil1"></td>
+			</tr>
+			<tr>
+				<td><b>Nilai bilangan ke-2</b></td>
+				<td><input type="number" id="Nil2"></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td><button type="button" onclick="kali()">*</button>
+					<button type="button" onclick="bagi()">/</button>
+					<button type="button" onclick="tambah()">+</button>
+					<button type="button" onclick="kurang()">-</button>
+					
+				</td>
+			</tr>
+		
+		</tbody></table>
+	</form>
+    
+    <script type="text/javascript"> 
+		function kali() {
+			let a = document.getElementById("Nil1").value;
+			let b = document.getElementById("Nil2").value;
+			let c = parseInt(a) * parseInt(b);
+
+			alert(a+" x "+b+" = "+c)
+			document.getElementById("hasil").value=c;
+		}
+		function bagi(){
+			let a = document.getElementById("Nil1").value;
+			let b = document.getElementById("Nil2").value;
+			let c = parseInt(a) / parseInt(b);
+
+			alert(a+" : "+b+" = "+c)
+			document.getElementById("hasil").value=c;
+		}
+		function tambah() {
+			let a = document.getElementById("Nil1").value;
+			let b = document.getElementById("Nil2").value;
+			let c = parseInt(a) + parseInt(b);
+
+			alert(a+" + "+b+" = "+c)
+			document.getElementById("hasil").value=c;
+		}
+		function kurang() {
+			let a = document.getElementById("Nil1").value;
+			let b = document.getElementById("Nil2").value;
+			let c = parseInt(a) - parseInt(b);
+
+			alert(a+" - "+b+" = "+c)
+			document.getElementById("hasil").value=c;
+		}
+
+
+	</script>
+</body>
+</html>
